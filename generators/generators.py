@@ -19,7 +19,7 @@ class Theme:
 
 def generate_css(theme:Theme, filename='styles.css'):
     with open(filename, 'w+') as f:
-        f.write(f'/*\n  {theme.name} theme colors \n*/\n')
+        f.write(f'/*\n  {theme.name} color theme \n*/\n')
         f.write(':root {')
 
         f.write('\n'.join(f'''
@@ -33,7 +33,7 @@ def generate_xresources(theme:Theme, filename='.Xresources'):
     attributes = vars(theme)
     
     with open(filename, 'w+') as f:
-        f.write(f'''! {theme.name} theme colors \n
+        f.write(f'''! {theme.name} color theme \n
 ! special
 *.background: {theme.black.color}
 *.foreground: {theme.white.color_alt}\n''')
