@@ -1,0 +1,33 @@
+:root {
+  /* black */
+  --color0: #121212;
+  --color8: #585858;
+
+  /* red */
+  --color1: #7a3842;
+  --color9: #cb6362;
+
+  /* green */
+  --color2: #3da542;
+  --color10: #a6d378;
+
+  /* yellow */
+  --color3: #e28c00;
+  --color11: #eccd00;
+
+  /* blue */
+  --color4: #203856;
+  --color12: #62aedc;
+
+  /* magenta */
+  --color5: #800080;
+  --color13: #C25ABD;
+
+  /* cyan */
+  --color6: #005F87;
+  --color14: #0087AF;
+
+  /* white */
+  --color7: #b9b9b9;
+  --color15: #E4E4E4;
+}
