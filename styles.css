@@ -1,33 +1,28 @@
+/*
+  Karoace theme colors 
+*/
 :root {
-  /* black */
-  --color0: #121212;
-  --color8: #585858;
+  --black: #121212;
+  --black_alt: #585858;
 
-  /* red */
-  --color1: #7a3842;
-  --color9: #cb6362;
+  --blue: #203856;
+  --blue_alt: #62aedc;
 
-  /* green */
-  --color2: #3da542;
-  --color10: #a6d378;
+  --cyan: #005F87;
+  --cyan_alt: #0087AF;
 
-  /* yellow */
-  --color3: #e28c00;
-  --color11: #eccd00;
+  --green: #3da542;
+  --green_alt: #a6d378;
 
-  /* blue */
-  --color4: #203856;
-  --color12: #62aedc;
+  --magenta: #800080;
+  --magenta_alt: #C25ABD;
 
-  /* magenta */
-  --color5: #800080;
-  --color13: #C25ABD;
+  --red: #7a3842;
+  --red_alt: #cb6362;
 
-  /* cyan */
-  --color6: #005F87;
-  --color14: #0087AF;
+  --white: #b9b9b9;
+  --white_alt: #E4E4E4;
 
-  /* white */
-  --color7: #b9b9b9;
-  --color15: #E4E4E4;
+  --yellow: #e28c00;
+  --yellow_alt: #eccd00;
 }
