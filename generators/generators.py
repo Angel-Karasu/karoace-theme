@@ -29,14 +29,36 @@ def generate_css(theme:Theme, filename='styles.css'):
 
         f.write('\n}')
 
+def generate_readme(theme:Theme, filename='README.md'):
+    colors = []
+    for attribute, value in vars(theme).items():
+        if type(value) is Color:
+            colors.append((attribute, value.color))
+            colors.append((attribute+'_alt', value.color_alt))
+
+    with open(filename, 'w+') as f:
+        f.write(f'# {theme.name} theme\n\n')
+        f.write('## Colors\n\n')
+        f.write('| | '+' | '.join(color for color, _ in colors)+' |\n')
+        f.write('| '+' | '.join('-' for _ in range(len(colors)+1))+' |\n')
+        f.write(
+            ' |\n'.join(
+                f'| **{bg_color_name}** | '+
+                ' | '.join(
+                    f'<span style="background-color:{bg_color}; color:{color}">{color}</span>'
+                    for _, color in colors
+                ) for bg_color_name, bg_color in colors
+            )+' |\n'
+        )
+
 def generate_xresources(theme:Theme, filename='.Xresources'):
     attributes = vars(theme)
     
     with open(filename, 'w+') as f:
-        f.write(f'''! {theme.name} color theme \n
-! special
-*.background: {theme.black.color}
-*.foreground: {theme.white.color_alt}\n''')
+        f.write(f'! {theme.name} color theme\n\n')
+        f.write('! special\n')
+        f.write(f'*.background: {theme.black.color}\n')
+        f.write(f'*.foreground: {theme.white.color_alt}\n')
         
         f.write('\n'.join(f'''
 ! {color}           

@@ -13,4 +13,5 @@ KAROACE_THEME = Theme(
 )
 
 generate_css(KAROACE_THEME)
+generate_readme(KAROACE_THEME)
 generate_xresources(KAROACE_THEME)
