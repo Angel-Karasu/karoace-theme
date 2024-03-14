@@ -45,7 +45,7 @@ def generate_readme(theme:Theme, filename='README.md'):
             ' |\n'.join(
                 f'| **{bg_color_name}** | '+
                 ' | '.join(
-                    '$${\color{'+color+'}\colorbox{'+bg_color+'}{\\'+color+'}}$$'
+                    f'<span style="background-color:{bg_color}; color:{color}">{color}</span>'
                     for _, color in colors
                 ) for bg_color_name, bg_color in colors
             )+' |\n'
