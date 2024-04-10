@@ -1,3 +1,4 @@
+#!/bin/python
 from generators import *
 
 KAROACE_THEME = Theme(
