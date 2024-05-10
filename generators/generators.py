@@ -51,7 +51,7 @@ def generate_readme(theme:Theme, filename='README.md'):
             )+' |\n'
         )
 
-def generate_xresources(theme:Theme, filename='.Xresources'):
+def generate_xresources(theme:Theme, filename='Xresources'):
     attributes = vars(theme)
     
     with open(filename, 'w+') as f:
